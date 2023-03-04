@@ -5,6 +5,7 @@
     top: 0;
     left: 0;
     font-family: sans-serif;
+    flex: 1 1 0;
 }
 
 
@@ -24,8 +25,12 @@ header{
     display: flex;
     list-style: none;
     background: linear-gradient(50deg,#06151e,#081e2c);
+    align-items: center;
 }
-
+header a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
 #navBar{
     display: flex;
     flex-direction: row;
@@ -39,7 +44,6 @@ header{
 }
 
 /*hero*/
-
 .heroContainer{
     display: flex;
     flex-direction: row;
@@ -57,6 +61,278 @@ header{
 
 #heroImg{
     height: auto;
-    width: 30%;
+    width: 300px;
     border-radius: 10px;
 }
+
+@media screen and (max-width : 700px) {
+    .heroContainer{
+        flex-direction: column;
+    }
+}
+
+
+/*about*/
+#aboutHeading{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+#items{
+    display: flex;
+    padding: 10px;
+    height: 30rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.boxes{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+figcaption{
+    text-align: center;
+}
+
+.img-box{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid #3882F6;
+    border-radius: 15px;
+    margin: 5px 20px 0px 20px;
+}
+
+
+/*Quotes*/
+#quote{
+    margin: 5%;
+    margin-left: 0;
+    padding: 12px;
+    background-color: #E5E7EB;
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/*CTA SECTION*/
+#ctaSection{
+    height: 100px;
+    width: 100%;
+    display: flex;
+}
+
+#cta{
+    background-color: #3882f6;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#cta button {
+    position: relative;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 1px solid #303030;
+    background: #212121;
+    color: #ae00ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    max-width: 150px;
+    max-height:30px;
+   }
+   
+   button:hover {
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
+   }
+   
+   button span {
+    position: absolute;
+   }
+   
+   button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+   }
+   
+   button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+   }
+   
+   button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+   }
+   
+   button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+   }
+   
+   button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+   }
+   
+   button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+   }
+   
+   button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+   }
+   
+   button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+   }
+   
+   button:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+   }
+   
+   button:active span:nth-child(1) 
+   span:nth-child(2) 
+   span:nth-child(2) 
+   span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+   }
+
+   button {
+    position: relative;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 1px solid #303030;
+    background: #212121;
+    color: #ae00ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    max-width: 150px;
+    max-height:30px;
+   }
+   
+   button:hover {
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
+   }
+   
+   button span {
+    position: absolute;
+   }
+   
+   button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+   }
+   
+   button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+   }
+   
+   button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+   }
+   
+   button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+   }
+   
+   button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+   }
+   
+   button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+   }
+   
+   button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+   }
+   
+   button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+   }
+   
+   button:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+   }
+   
+   button:active span:nth-child(1) 
+   span:nth-child(2) 
+   span:nth-child(2) 
+   span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+   }
