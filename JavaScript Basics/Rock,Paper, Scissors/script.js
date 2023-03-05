@@ -1,17 +1,47 @@
-/*
-1. create random function to get pc input = done
-2. Write a function that plays a single round of the game
-2.1. use tolowercase = done
+const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const resultText = document.querySelector("#resultText");
+const choiceBtns = document.querySelectorAll(".choiceBtn");
+let player;
+let computer;
+let result;
 
-*/
-const arr = ["rock", "paper", "scissors"];
+choiceBtns.forEach(button => button.addEventListener("click", () => {
 
-function getComputerChoice(){
-    let index = Math.floor(Math.random()*arr.length);
-    return index;
+    player = button.textContent;
+    computerTurn();
+    playerText.textContent = `Player: ${player}`;
+    computerText.textContent = `Computer: ${computer}`;
+    resultText.textContent = checkWinner();
+}));
+
+function computerTurn(){
+
+    const randNum = Math.floor(Math.random() * 3) + 1;
+
+    switch(randNum){
+      case 1:
+        computer = "ROCK";
+        break;
+      case 2:
+        computer = "PAPER";
+        break;
+      case 3:
+        computer = "SCISSORS";
+        break;
+    }
 }
-
-let User = prompt('Rock, Paper or Scissors?');
-let userSelection = User.toLowerCase();
-let computerSelection = arr[getComputerChoice()];
-console.log(computerSelection);
+function checkWinner(){
+    if(player == computer){
+      return "Draw!";
+    }
+    else if(computer == "ROCK"){
+      return (player == "PAPER") ? "You Win!" : "You Lose!"
+    }
+    else if(computer == "PAPER"){
+      return (player == "SCISSORS") ? "You Win!" : "You Lose!"
+    }
+    else if(computer == "SCISSORS"){
+      return (player == "ROCK") ? "You Win!" : "You Lose!"
+    }
+}
