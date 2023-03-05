@@ -6,14 +6,14 @@ let player;
 let computer;
 let result;
 
-choiceBtns.forEach(button => button.addEventListener("click", () => {
+  choiceBtns.forEach(button => button.addEventListener("click", () => {
 
-    player = button.textContent;
-    computerTurn();
-    playerText.textContent = `Player: ${player}`;
-    computerText.textContent = `Computer: ${computer}`;
-    resultText.textContent = checkWinner();
-}));
+      player = button.textContent;
+      computerTurn();
+      playerText.textContent = `Player: ${player}`;
+      computerText.textContent = `Computer: ${computer}`;
+      resultText.textContent = checkWinner();
+  }));
 
 function computerTurn(){
 

@@ -1,0 +1,21 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#gameDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameText{
+    flex-direction: column;
+    padding: 10px;
+}
+
+.choiceBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
